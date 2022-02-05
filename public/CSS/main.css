@@ -1,0 +1,48 @@
+body {
+    /* background-color: #FF9966; */
+    background-color: #fbe89c;
+}
+
+.lesConnexions {
+    background-color: #FFF;
+    opacity: .7;
+}
+
+.cadreConnexion {
+    width: 190px;
+    color: inherit;
+    text-decoration: none;
+    padding: 20px 5px;
+    cursor: pointer;
+}
+
+.cadreConnexion:not(:last-child) {
+    border-bottom: 1px solid #000;
+}
+
+.cadreConnexion i {
+    margin-right: 20px;
+    font-size: 2rem;
+}
+
+.cadreConnexion:not(i) {
+   font-size: 1.6rem;
+}
+
+
+#espaceConnexion .card {
+    background-color: #fef8e0;
+    width: 18rem;
+    height: 390px;
+}
+
+.iconeEspace {
+    border: 2px solid #000;
+    border-radius: 50%;
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+#espaceConnexion input {
+    border-radius: .7rem;
+}
