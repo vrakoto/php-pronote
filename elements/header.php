@@ -13,7 +13,7 @@
 
 <body>
 
-<?php if (!empty($id)): ?>
+<?php if (!empty($id)) : ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><?= $id ?></a>
@@ -24,7 +24,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <?= nav_item('/accueil', 'Accueil') ?>
 
-                    <?php if ($pdo->getUtilisateur($id)['espace'] === 'direction'): ?>
+                    <?php if ($pdo->getUtilisateur($id)['espace'] === 'direction') : ?>
                         <?= nav_item('/etablissement', 'Administration établissement') ?>
 
                         <li class="nav-item dropdown">
@@ -39,13 +39,13 @@
                     <?php endif ?>
 
 
-                    <?php if ($pdo->getUtilisateur($id)['espace'] === 'professeur'): ?>
+                    <?php if ($pdo->getUtilisateur($id)['espace'] === 'professeur') : ?>
                         <?= nav_item('/eleves', 'Administrer élève') ?>
                         <?= nav_item('/cours', 'Administrer cours') ?>
                     <?php endif ?>
 
 
-                    <?php if ($pdo->getUtilisateur($id)['espace'] === 'etudiant'): ?>
+                    <?php if ($pdo->getUtilisateur($id)['espace'] === 'etudiant') : ?>
                         <?= nav_item('/donnees', 'Mes données') ?>
                         <?= nav_item('/devoirs', 'Cahier de texte') ?>
                         <?= nav_item('/notes', 'Notes') ?>
@@ -59,3 +59,15 @@
         </div>
     </nav>
 <?php endif ?>
+
+<div class="modal fade" id="message" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+</div>

@@ -30,10 +30,13 @@ body {
 }
 
 
+.etablissementConnexion .card {
+    width: 400px !important;
+}
+
 #espaceConnexion .card {
     background-color: #fef8e0;
     width: 18rem;
-    height: 390px;
 }
 
 .iconeEspace {
@@ -45,4 +48,57 @@ body {
 
 #espaceConnexion input {
     border-radius: .7rem;
+}
+
+
+.carteAccueil .card {
+    width: 550px;
+    margin-top: 40px;
+    /* max-height: 215px; */
+}
+
+.carteAccueil .card:not(:first-child), .carteAccueil .card:not(:last-child) {
+    margin-left: 40px;
+}
+
+.carteAccueil .card .card-title {
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+#liste {
+    height: 80px;
+    overflow-y: scroll;
+}
+
+.laListe {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.laListe:not(:last-child) {
+    border-bottom: 1px solid grey;
+}
+
+.laDate {
+    background-color: #c5e6fc;
+    color: rgb(0, 95, 158);
+    font-weight: bold;
+}
+
+.heure {
+    font-style: italic;;
+}
+
+
+/* Direction -- Etablissement */
+.swap {
+    transform: translateX(100%);
+    transition: transform .4s;
+}
+
+.remove {
+    display: none;
 }

@@ -25,6 +25,8 @@
                     </div>
                     <button type="submit" class="btn btn-primary w-100 p-3">Connexion</button>
                 </form>
+
+                <a href="/inscription" class="mt-3">M'inscrire !</a>
             </div>
 
         </div>

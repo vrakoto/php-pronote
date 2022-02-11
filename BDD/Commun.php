@@ -1,7 +1,7 @@
 <?php
 
 class Commun {
-    private $pdo;
+    protected $pdo;
 
     function __construct()
     {
@@ -32,5 +32,18 @@ class Commun {
         ]);
 
         return !empty($p->fetch()) && password_verify($mdp, $this->getUtilisateur($id)['mdp']);
+    }
+
+    function getInfosEtablissement(int $idEtablissement): array
+    {
+        $req = "SELECT * FROM etablissement 
+                JOIN etablissement_options on idEtablissement = etablissement.id
+                WHERE etablissement.id = :id";
+        $p = $this->pdo->prepare($req);
+        $p->execute([
+            'id' => $idEtablissement
+        ]);
+
+        return $p->fetch();
     }
 }
